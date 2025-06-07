@@ -1,4 +1,5 @@
 class ApiConstants{
-  static const baseUrl='https://api.restful-api.dev';
-  static const getMovies='$baseUrl/objects';
+  static const apiKey='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyYmUxYzAwZmJmZDRhODg4YTMxZjI2YTNmMWM2Y2YxYSIsIm5iZiI6MTc0OTI3NTc4Ny4yMDg5OTk5LCJzdWIiOiI2ODQzZDQ4YmI2MmRjMGYwMjYzMDBmNWEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.ZbX1xZNgqL5HycVTMZI9uclYF9Wz6CZTiPgzLK6vPB4';
+  static const baseUrl='https://api.themoviedb.org';
+  static const getMovies='$baseUrl/3/search/movie?query';
 }

@@ -15,13 +15,15 @@ final getMoviesProvider = FutureProvider.family<List<MoviesModel>,String>((ref,s
   return repository.getMovies(search);
 });
 
-
+// The controller class that extends StateNotifier<bool>
 class MoviesController extends StateNotifier<bool> {
   final MoviesRepository _moviesRepository;
+  //Constructor takes the repository and initializes the loading state to false.
   MoviesController({required MoviesRepository objectsRepository})
       : _moviesRepository = objectsRepository,
         super(false); // loading
 
+  //// Method to fetch movies using the repository with the given search query.
   Future<List<MoviesModel>> getMovies(String search) async {
     final events = await _moviesRepository.getMovies(search);
     return events;
