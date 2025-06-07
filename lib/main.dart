@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'features/home/screens/home.dart';
 
 Future<void> main() async {
+  try {
+    await dotenv.load(fileName: ".env");
+  } catch (e, stackTrace) {
+    print('Failed to load .env file: $e');
+    print(stackTrace);
+  }
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const ProviderScope(
       child: MyApp())
